@@ -1,0 +1,458 @@
+/* .header{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 2s ease-out;
+}
+
+.header-contents h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw,22px);
+}
+
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+}
+
+.header-contents button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+
+
+
+@media (max-width:1050px) {
+
+    .header-contents{
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px) {
+
+    .header-contents{
+        max-width: 55%;
+    }
+
+    .header-contents p{
+        display: none;
+    }
+
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+} */
+
+
+
+
+
+
+
+
+
+/*=============== my code ===============*/
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(45, 99%, 55%);
+  --first-color-alt: hsl(45, 99%, 48%);
+  --second-color: hsl(22, 100%, 8%);
+  --white-color: hsl(34, 100%, 96%);
+  --title-color: hsl(22, 100%, 8%);
+  --text-color: hsl(22, 24%, 32%);
+  --text-color-light: hsl(23, 16%, 40%);
+  --body-color: hsl(34, 100%, 92%);
+  --body-color-alt: hsl(34, 100%, 88%);
+  --container-color: hsl(34, 100%, 96%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(22, 100%, 8%, .2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(22, 100%, 8%, .2));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Aclonica", sans-serif;
+  --biggest-font-size: 3rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-regular);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+/* .container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+} */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 1rem 4rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+/* .main {
+  /* overflow: hidden; 
+} */
+
+/*=============== HEADER & NAV ===============*/
+
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Add shadow header */
+.shadow-header{
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .1);
+}
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+
+.home__container{
+  padding-block: 3rem 2rem;
+  justify-content: center;
+  row-gap: 3.5rem;
+}
+
+.home__data{
+  position: relative;
+  text-align: center;
+}
+
+.home__title{
+  font-size: var(--biggest-font-size);
+  margin-bottom: 1rem;
+}
+
+.home__description{
+  margin-bottom: 2.5rem;
+}
+
+.home__sticker{
+  width: 40px;
+  rotate: 15deg;
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  opacity: .5;
+}
+
+.home__images{
+  position: relative;
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+}
+
+.home__ingredient{
+  width: 60px;
+  filter: var(--shadow-small-img);
+  position: absolute;
+  z-index: 2;
+}
+
+.home__burger,
+.home__dish{
+  filter: var(--shadow-big-img);
+}
+
+.home__burger{
+  width: 280px;
+  z-index: 2;
+}
+
+.home__dish{
+  max-width: initial;
+  width: 320px;
+  position: absolute;
+  bottom: -1.5rem;
+}
+
+.home__potato-1{
+  left: -1rem;
+  top: .75rem;
+}
+.home__potato-2{
+  right: -.75rem;
+  bottom: -2rem;
+  rotate: 90deg;
+}
+
+.home__tomato-1{
+  width: 40px;
+  top: -1rem;
+  right: 6rem;
+}
+
+.home__tomato-2{
+  width: 40px;
+  left: 5.5rem;
+  bottom: 1.5rem;
+}
+
+.home__lettuce-1{
+  top: 2.5rem;
+  right: -2rem;
+  transform: scale(-1);
+}
+
+.home__lettuce-2{
+  left: -2rem;
+  bottom: 1rem;
+}
+
+
+
+
+/*=============== BUTTON ===============*/
+.button {
+  display: inline-flex;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 1rem 1.5rem;
+  font-family: var(--second-font);
+  border-radius: 4rem;
+  transition: box-shadow .4s;
+}
+
+.button:hover{
+  box-shadow: 0 8px 24px hsl(22, 100%, 8%, .2);
+}
+
+/*=============== RECIPE ===============*/
+
+
+/*=============== POPULAR ===============*/
+
+
+/*=============== DELIVERY ===============*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 330px) {
+  .container{
+    margin-inline: 1rem;
+  }
+
+  .home__title{
+    font-size: 2rem;
+  }
+
+  .home__burger{
+    width: 210px;
+  }
+
+  .home__dish{
+    width: 250px;
+    bottom: -2rem;
+  }
+  .home__description{
+    margin-inline: 1.5rem;
+  }
+}
+
+/* For medium devices */
+
+@media screen and (max-width: 540px) {
+  .home__container{
+    grid-template-columns: 360px;
+    justify-content: center;
+  }
+}
+/* For large devices */
+
+@media screen and (min-width: 1150px) {
+  .container{
+    margin-inline: auto;
+  }
+
+  .section{
+    padding-block: 1rem 2rem;
+  }
+
+  .section__title{
+    margin-bottom: 4.5rem;
+  }
+
+  .home__container{
+    grid-template-columns: 430px 605px;
+    align-items: center;
+    column-gap: 18rem;
+    padding-block: 7rem 4rem;
+  }
+
+  .home__data{
+    text-align: initial;
+  }
+
+  .home__description{
+    margin-bottom: 3.5rem;
+    padding-right: 3rem;
+  }
+
+  .home__sticker{
+    width: 60px;
+    right: 10rem;
+    bottom: 1rem;
+  }
+
+  .home__burger{
+    width: 490px;
+  }
+
+  .home__dish{
+    width: 560px;
+    bottom: -4rem;
+  }
+
+  .home__ingredient{
+    width: 100px;
+  }
+  .home__potato-1{
+    left: -2rem;
+    top: 1.5rem;
+  }
+  .home__potato-2{
+    right: -1.5rem;
+    bottom: 3rem;
+  }
+  .home__tomato-1{
+    width: 70px;
+    top: -1.5rem;
+    right: 10rem;
+  }
+  .home__tomato-2{
+    width: 70px;
+    top: 9.5rem;
+    right: -2.5rem;
+  }
+
+  .home__lettuce-1{
+    top: 4rem;
+    right: -3.5rem;
+  }
+  .home__lettuce-2{
+    left: -3.5rem;
+    bottom: 2rem;
+  }
+}
+

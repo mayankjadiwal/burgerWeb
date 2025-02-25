@@ -1,0 +1,200 @@
+/*=============== my code ===============*/
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(45, 99%, 55%);
+  --first-color-alt: hsl(45, 99%, 48%);
+  --second-color: hsl(22, 100%, 8%);
+  --white-color: hsl(34, 100%, 96%);
+  --title-color: hsl(22, 100%, 8%);
+  --text-color: hsl(22, 24%, 32%);
+  --text-color-light: hsl(23, 16%, 40%);
+  --body-color: hsl(34, 100%, 92%);
+  --body-color-alt: hsl(34, 100%, 88%);
+  --container-color: hsl(34, 100%, 96%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(22, 100%, 8%, .2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(22, 100%, 8%, .2));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Aclonica", sans-serif;
+  --biggest-font-size: 3rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-regular);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+/* .container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+} */
+
+.section {
+  padding-block: 1rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+/* .main {
+  /* overflow: hidden; 
+} */
+
+/*=============== HEADER & NAV ===============*/
+
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Add shadow header */
+.shadow-header{
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .1);
+}
+
+
+
+
+/*=============== Popular ===============*/
+.popular{
+    background-color: var(--body-color-alt);
+}
+
+.popular-container{
+    padding-block: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 1.5rem;
+}
+
+.popular__card{
+    position: relative;
+    background-color: var(--first-color);
+    padding: 6rem .75rem 1rem;
+    border-radius: 1rem;
+    border: 4px solid var(--container-color);
+}
+
+.popular__img{
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    width: 120px;
+    margin: 0 auto;
+    filter: var(--shadow-small-img);
+    transition: transform .4s;
+}
+
+.popular__title{
+    font-size: var(--normal-font-size);
+    margin-bottom: .75rem;
+}
+
+.popular__price{
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-size: var(--h2-font-size);
+}
+
+.popular__button{
+    position: absolute;
+    right: .75rem;
+    bottom: 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--second-color);
+    color: white;
+    padding: 6px;
+    border-radius: .5rem;
+    font-size: 1.25rem;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.popular__card:hover .popular__img{
+    transform: translateY(-.8rem);
+}
+
+
+
