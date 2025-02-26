@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="footer-grid">
 
           <div className="logo-section">
-            <img src={assets.logo2} alt="KFC Logo" className="footer-logo" />
+            <img src={assets.burger28_logo2} alt="burger28 Logo" className="footer-logo" />
             <h3>Burger28</h3>
           </div>
 

@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import './SearchBar.css';
 
 const SearchBar = ({ menuItems = [
-  { id: 1, name: "Classic Burger", category: "Burgers", price: "$8.99" },
-  { id: 2, name: "Crunchy Taco", category: "Taco", price: "$4.99" },
-  { id: 3, name: "Chocolate Shake", category: "Desserts", price: "$5.99" },
-  { id: 4, name: "Value Combo", category: "Value Meals", price: "$12.99" },
-  { id: 5, name: "Golden Fries", category: "Fries", price: "$3.99" },
-  { id: 6, name: "Iced Coffee", category: "Beverages", price: "$2.99" }
+  { id: 1, name: "Classic Burger", category: "Burgers", price: "₹79" },
+  { id: 2, name: "Crunchy Taco", category: "Taco", price: "₹49" },
+  { id: 3, name: "Chocolate Shake", category: "Desserts", price: "₹68" },
+  { id: 4, name: "Value Combo", category: "Value Meals", price: "₹145" },
+  { id: 5, name: "Golden Fries", category: "Fries", price: "₹58" },
+  { id: 6, name: "Iced Coffee", category: "Beverages", price: "₹88" }
 ] }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');

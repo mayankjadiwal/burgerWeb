@@ -51,7 +51,7 @@ const Header = () => {
               delicious burgers.
             </p>               
 
-            <a href="#" className="button">Bite Now</a>
+            <a href="#food-display" className="button">Bite Now</a>
                
             <img src={assets.sticker_potatoes} alt="home__sticker" className="home__sticker"/>
           </div>

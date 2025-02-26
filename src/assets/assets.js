@@ -60,6 +60,8 @@ import profile_icon from './profile_icon.png'
 import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
+import burger28_logo from './burger28_logo.png'
+import burger28_logo2 from './burger28_logo2.png'
 
 
 
@@ -144,7 +146,9 @@ export const assets = {
     contact_man,
     sticker_burger,
     sticker_soda,
-    man
+    man,
+    burger28_logo,
+    burger28_logo2
 }
 
 export const menu_list = [
@@ -157,7 +161,7 @@ export const menu_list = [
         menu_image: menu_taco
     },
     {
-        menu_name: "Deserts",
+        menu_name: "Desserts",
         menu_image: menu_dessert
     },
     {
