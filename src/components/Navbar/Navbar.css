@@ -160,6 +160,19 @@
     color: #2a0f00;
 }
 
+@media (max-width:330px)
+{
+    .navbar{
+        padding-inline: 1rem;
+    }
+}
+
+
+
+
+
+
+
 @media (max-width:900px)
 {
     .navbar .logo{

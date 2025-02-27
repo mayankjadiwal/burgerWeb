@@ -62,6 +62,8 @@ import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import burger28_logo from './burger28_logo.png'
 import burger28_logo2 from './burger28_logo2.png'
+import veg from './veg.png'
+import non_veg from './non_veg.png'
 
 
 
@@ -148,7 +150,9 @@ export const assets = {
     sticker_soda,
     man,
     burger28_logo,
-    burger28_logo2
+    burger28_logo2,
+    veg,
+    non_veg
 }
 
 export const menu_list = [
