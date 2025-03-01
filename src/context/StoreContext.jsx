@@ -12,24 +12,6 @@ const StoreContextProvider = (props) => {
     const [token,setToken] = useState("");
     const [food_list,setFoodList] = useState([])
 
-
-
-
-
-    // const [search,setSearch] = useState('');
-    // const [showSearch,setShowSearch] = useState(true)
-
-    // const value = {
-    //     search,setSearch,showSearch,setShowSearch
-    // }
-
-
-
-
-
-
-
-
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
             setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
@@ -42,7 +24,6 @@ const StoreContextProvider = (props) => {
             await axios.post(url+"/api/cart/add",{itemId},{headers:{token}})
         }
     }
-
 
 
     const removeFromCart = async (itemId) => {
@@ -70,7 +51,9 @@ const StoreContextProvider = (props) => {
 
     const loadCartData = async(token) => {
         const response = await axios.post(url+"/api/cart/get",{},{headers:{token}});
-        setCartItems(response.data.cartData);
+        // console.log("🛒 Cart Data API Response:", response.data); 
+        // console.log("✅ Setting Cart Items:", response.data?.cartData);
+        setCartItems(response.data?.cartData || {}); 
     }
 
 

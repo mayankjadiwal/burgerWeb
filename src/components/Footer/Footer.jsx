@@ -51,7 +51,7 @@ const Footer = () => {
 
           <div className="logo-section">
             <img src={assets.burger28_logo2} alt="burger28 Logo" className="footer-logo" />
-            <h3>Burger28</h3>
+            <h3><span id='burger-color'>Burger28</span> India.</h3>
           </div>
 
 
@@ -107,6 +107,7 @@ const Footer = () => {
           <p className="copyright">
             Copyright © Burger28 Corporation 2025. All rights reserved
           </p>
+          
           <div className="social-links">
             <a href="#">
               <i className="ri-facebook-circle-fill"></i>

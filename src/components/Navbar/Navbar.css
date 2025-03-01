@@ -202,6 +202,9 @@
     {
         display: none;
     }
+        .navbar{
+        padding-inline: 1rem;
+    }
 }
 
 @media (max-width:500px) {
@@ -210,6 +213,9 @@
     .search-icon
     {
         display: none;
+    }
+    .navbar{
+        padding-inline: 1rem;
     }
 }
 

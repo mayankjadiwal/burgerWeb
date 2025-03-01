@@ -82,7 +82,10 @@ const FoodItem = ({id, name, price, description, image}) => {
       </div>
 
       {!cartItems?.[id] ? (
-        <button className="popular__button" onClick={() => addToCart(id)}>
+        <button className="popular__button" onClick={() => {
+          console.log(id, "dd")
+          addToCart(id)
+        }}>
           <i className="ri-shopping-bag-3-fill"></i>
         </button>
       ) : (
